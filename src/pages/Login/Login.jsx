@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useNavigate} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import {toast, ToastContainer} from "react-toastify";
 
 
@@ -12,7 +14,7 @@ const Login = () => {
 	const handleChangePassword = (e) => {
 		setPassword(e.target.value);
 	};
-
+	let navigate = useNavigate()
 	function handleClick() {
 		if (login === "admin" && password === "admin") {
 			navigate("/projects");
@@ -30,13 +32,7 @@ const Login = () => {
 			});
 		}
 	}
-	let location = useLocation();
-	let navigate = useNavigate()
- useEffect(()=>{
-     if(location.pathname === '/'){
-		 navigate('/login')
-	 }
- },[location.pathname])
+
 	return (
 			<div className="w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
 				<div className="w-full sm:max-w-md p-5 mx-auto">

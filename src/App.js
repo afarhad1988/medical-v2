@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Routes, Route } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import Tasks from "./pages/Tasks";
 import Projects from "./pages/Projects";
 import Calendar from "./pages/Calendar";
 import Capabilities from "./pages/Capabilities";
 import Login from "./pages/Login";
 
-const App = () => {
 
+const App = () => {
+	let location = useLocation();
+	let navigate = useNavigate()
+	useEffect(()=>{
+		if(location.pathname === '/'){
+			navigate('/login')
+
+		}
+	},[location.pathname])
 	return (
+
    					<Routes>
    							<Route path='/login' element={<Login/>}/>
    							<Route path='/tasks' element={<Tasks/>}/>
