@@ -27,6 +27,7 @@ const Projects = () => {
 		console.log(222)
 
 	};
+
 	return (
 			<Layout>
 				{openModal && (
@@ -51,17 +52,20 @@ const Projects = () => {
 					<Buttons setOpenModal={setOpenModal}  handleFlex={handleFlex}
 							 handleBlock={handleBlock}/>
 				</div>
-                  <div className={
-					  flex ? "flex justify-start flex-wrap columns-auto" : "block"
-				  }>
-					  {
-						  projects.map((item)=>(
-								  <Cards projects={projects} flex={flex} item={item}/>
-						  ))
-					  }
-					  {/*<Card flex={flex}/>*/}
 
-				  </div>
+
+							<div className={
+								flex ? "flex justify-start flex-wrap columns-auto" : "block"
+							}>
+								{
+									projects.length ? projects.map((item) => (
+											<Cards projects={projects} flex={flex} item={item}/>
+									)): <h2 className='text-lg font-bold'>Вам необходимо добавить проект</h2>
+								}
+								{/*<Card flex={flex}/>*/}
+
+							</div>
+
 
 			</Layout>
 	);
