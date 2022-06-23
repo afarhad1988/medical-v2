@@ -3,8 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import ModalWindow from "../../components/ModalWindow/ModalWindow";
 import Buttons from "../../components/Buttons/Buttons";
-import Card from "../../components/Card/Card";
-import CardAPI from "../../components/CardAPI/CardAPI";
+import Cards from "../../components/Cards/Cards";
 
 const Projects = () => {
 	const [projects, setProjects] = useState([]);
@@ -55,8 +54,13 @@ const Projects = () => {
                   <div className={
 					  flex ? "flex justify-start flex-wrap columns-auto" : "block"
 				  }>
-					  <Card flex={flex}/>
-					  <CardAPI projects={projects} flex={flex}/>
+					  {
+						  projects.map((item)=>(
+								  <Cards projects={projects} flex={flex} item={item}/>
+						  ))
+					  }
+					  {/*<Card flex={flex}/>*/}
+
 				  </div>
 
 			</Layout>

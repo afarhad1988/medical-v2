@@ -46,9 +46,9 @@ const ModalWindow = ({ setProjects, projects, setOpenModal }) => {
 	});
 
 	return (
-			<div className="fixed justify-around flex w-full bg-white p-6 ">
+			<div className="fixed top-0 right-0 left-0 bottom-0 m-0-auto overflow-x-scroll justify-center flex w-full bg-white p-6 ">
 				<div
-						className="absolute right-2/1 top-14 cursor-pointer text-pink-500"
+						className="absolute right-1/3 top-14 cursor-pointer text-pink-500 "
 						onClick={() => {
 							setOpenModal(false);
 						}}

@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {useLocation} from "react-router-dom";
+import React, { useState} from 'react';
 import { useNavigate } from "react-router-dom";
-
 import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -105,18 +104,19 @@ const Login = () => {
 							</a>
 						</div>
 					</form>
+					<ToastContainer
+							position="top-center"
+							autoClose={9000}
+							hideProgressBar={false}
+							newestOnTop={false}
+							closeOnClick
+							rtl={false}
+							pauseOnFocusLoss
+							draggable
+							pauseOnHover
+					/>
 				</div>
-				<ToastContainer
-						position="top-center"
-						autoClose={9000}
-						hideProgressBar={false}
-						newestOnTop={false}
-						closeOnClick
-						rtl={false}
-						pauseOnFocusLoss
-						draggable
-						pauseOnHover
-				/>
+
 			</div>
 	);
 };

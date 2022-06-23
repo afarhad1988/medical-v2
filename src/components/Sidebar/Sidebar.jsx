@@ -12,7 +12,7 @@ const Sidebar = () => {
 					<NavLink to="/projects" className='block pl-2 text-white py-2'><i className='bx bx-qr  mr-2'/>Проекты</NavLink>
 					<NavLink to="/calendar" className='block pl-2 text-white py-2'><i
 							className='bx bx-qr mr-2'/>Календарь</NavLink>
-					<NavLink to="capabilities" className='block pl-2 text-white py-2'><i className='bx bx-qr mr-2'/>Возможности</NavLink>
+					<NavLink to="/capabilities" className='block pl-2 text-white py-2'><i className='bx bx-qr mr-2'/>Возможности</NavLink>
 				</nav>
 			</aside>
 	);

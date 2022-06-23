@@ -1,15 +1,13 @@
 import React from 'react';
 
-const CardAPI = ({projects}) => {
+const Cards = ({item}) => {
 	return (
-			<div>
-				{projects.map((item) => (
 						<div
-								className=" flex w-80 flex-col  shadow-xl  shadow-slate-300/60"
+								className=" flex w-80 flex-col  shadow-xl  shadow-slate-300/60 border-4"
 								key={item.id}
 						>
 							<img
-									className=" w-96  object-cover object-center"
+									className=" w-80  object-cover object-center"
 									src={item.img}
 							/>
 
@@ -81,8 +79,8 @@ const CardAPI = ({projects}) => {
 								</div>
 							</div>
 						</div>
-				))}
-			</div>
+
+
 	);
 };
-export default CardAPI;
+export default Cards;
