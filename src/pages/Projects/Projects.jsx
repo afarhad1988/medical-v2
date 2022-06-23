@@ -5,6 +5,7 @@ import ModalWindow from "../../components/ModalWindow/ModalWindow";
 import Buttons from "../../components/Buttons/Buttons";
 import Cards from "../../components/Cards/Cards";
 
+
 const Projects = () => {
 	const [projects, setProjects] = useState([]);
 	const [openModal, setOpenModal] = useState(false);

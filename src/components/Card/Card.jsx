@@ -10,7 +10,7 @@ const Card = () => {
 					/>
 
 					<div className="p-4">
-						<h1 className="text-xl font-medium text-slate-600 pb-2">
+						<h1 className="text-xl font-medium text-slate-600 pb-2 uppercase">
 							Терапевтический корпус
 						</h1>
 						<div>

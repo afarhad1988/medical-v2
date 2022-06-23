@@ -6,15 +6,15 @@ const Cards = ({item}) => {
 								className=" flex w-80 flex-col  shadow-xl  shadow-slate-300/60 mr-4 mb-4"
 								key={item.id}
 						>
-							<div className='w-80 h-60'>
+							<div className='w-80 h-48'>
 								<img
-										className=" w-80 h-60 object-cover object-center"
+										className=" w-80 h-48 object-cover object-center"
 										src={item.img}
 								/>
 							</div>
 
 							<div className="p-4">
-								<h1 className="text-xl font-medium text-slate-600 pb-2">
+								<h1 className="text-xl font-medium text-slate-600 pb-2 uppercase">
 									{item.title}
 								</h1>
 								<div>
