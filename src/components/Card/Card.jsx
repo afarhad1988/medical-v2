@@ -4,10 +4,7 @@ const Card = () => {
 	return (
 
 				<div className=" flex w-80 flex-col  shadow-xl my-3 mr-3   shadow-slate-300/60">
-					<img
-							className=" w-96  object-cover object-center"
-							src={hospital}
-					/>
+					<img src={hospital} alt="" className=" w-96  object-cover object-center" />
 
 					<div className="p-4">
 						<h1 className="text-xl font-medium text-slate-600 pb-2 uppercase">

@@ -1,8 +1,7 @@
 import React, { useState} from 'react';
 import { useNavigate } from "react-router-dom";
-import {toast, ToastContainer} from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
 	const [login, setLogin] = useState("");
@@ -20,14 +19,9 @@ const Login = () => {
 		} else {
 			setPassword("");
 			setLogin("");
-			toast.warn("Вы ввели неверные данные", {
-				position: "top-center",
-				autoClose: 9000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
+			toast.error("Вы ввели неверные данные", {
+				duration: 9000,
+				position: 'top-center',
 			});
 		}
 	}
@@ -37,7 +31,7 @@ const Login = () => {
 				<div className="w-full sm:max-w-md p-5 mx-auto">
 					<button
 							type="button"
-							className="h-12 w-12 overflow-hidden rounded-full flex items-center justify-center m-0 m-auto"
+							className="h-12 w-12 overflow-hidden rounded-full flex items-center justify-center m-auto"
 					>
 						<img
 								className="flex  justify-center"
@@ -98,25 +92,15 @@ const Login = () => {
 							>
 								Войти
 							</button>
-							<a href="#" className="text-sm text-fuchsia-700">
-								{" "}
-								Забыли пароль?{" "}
+							<a href="" className="text-sm text-fuchsia-700">
+
+								Забыли пароль?
 							</a>
 						</div>
 					</form>
-					<ToastContainer
-							position="top-center"
-							autoClose={9000}
-							hideProgressBar={false}
-							newestOnTop={false}
-							closeOnClick
-							rtl={false}
-							pauseOnFocusLoss
-							draggable
-							pauseOnHover
-					/>
+					<Toaster position="top-center"  toastOptions={{
+						duration: 9000 }} />
 				</div>
-
 			</div>
 	);
 };

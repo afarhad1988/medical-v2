@@ -7,10 +7,7 @@ const Cards = ({item}) => {
 								key={item.id}
 						>
 							<div className='w-80 h-48'>
-								<img
-										className=" w-80 h-48 object-cover object-center"
-										src={item.img}
-								/>
+								<img src={item.img} alt='' className=" w-80 h-48 object-cover object-center"/>
 							</div>
 
 							<div className="p-4">

@@ -10,13 +10,13 @@ import Login from "./pages/Login";
 
 const App = () => {
 	let location = useLocation();
-	let navigate = useNavigate()
+	let navigate = useNavigate();
 	useEffect(()=>{
 		if(location.pathname === '/'){
 			navigate('/login')
 
 		}
-	},[location.pathname])
+	},[location.pathname, navigate])
 	return (
 
    					<Routes>
